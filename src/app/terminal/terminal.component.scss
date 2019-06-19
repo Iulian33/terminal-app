@@ -1,0 +1,33 @@
+#terminal {
+  overflow: scroll;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 850px;
+  padding: 15px;
+  height: 100%;
+  max-height: 400px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  border-top: 20px solid #dbdbdb;
+  -webkit-box-shadow: 0 0 57px 26px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 57px 26px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 57px 26px rgba(0, 0, 0, 0.3);
+}
+
+[red] {
+  color: #ff0000;
+}
+
+
+input {
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  width: 96%;
+  outline: 0;
+  font-size: 12px;
+}

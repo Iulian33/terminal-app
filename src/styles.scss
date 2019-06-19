@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  cursor: default;
+  font-family: monospace;
+}
+
+.terminal-line {
+  line-height: 25px;
+}
+
+.error-command {
+  .terminal-line {
+    color: red;
+  }
+}
+
+.success {
+  .terminal-line {
+    color: #00eb00;
+  }
+}
+
+.success-text {
+  color: #00eb00;
+}

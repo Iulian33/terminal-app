@@ -1,0 +1,15 @@
+<div id="terminal" (click)="focusTerminal($event)">
+  <div id="output">
+    Angular Terminal <br> (type: <u class="success-text">help</u> for more information)<br> Terminal V1.0.1<br>
+    <div class="result-item" *ngFor="let terminalCommand of terminalHistory">
+      <app-terminal-command [terminalCommand]="terminalCommand.commandString"></app-terminal-command>
+      <app-terminal-output [terminalOutput]="terminalCommand.commandOutput"
+                           [className]="terminalCommand.status">
+      </app-terminal-output>
+    </div>
+  </div>
+  <div class="terminal-line">
+    <span id="prompt">$ </span>
+    <input type="text" id="terminalInput" (keypress)="handleCommand($event)" />
+  </div>
+</div>
