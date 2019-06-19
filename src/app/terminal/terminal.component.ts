@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TerminalService } from './terminal.service';
 import { TerminalModel } from './terminal.model';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-terminal',
@@ -31,8 +32,12 @@ export class TerminalComponent implements OnInit {
   }
 
   focusTerminal(event) {
-    console.log(event.target);
-    const commandField = event.target.querySelector('input');
+    const terminalWindow = event.path.find((el) => {
+      if (el.querySelector('#terminal')) {
+        return el;
+      }
+    });
+    const commandField = terminalWindow.querySelector('input');
     if (commandField) {
       commandField.focus();
     }
